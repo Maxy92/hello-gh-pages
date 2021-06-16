@@ -9,6 +9,9 @@ const port = process.env.PORT || 3000;
 // crea el objeto app
 const app = express();
 
+// agregamos esta línea (linea para html en heroku)
+app.use(express.static('public'));
+
 // la app responde con Hello world
 // a todas las peticiones GET a /
 app.get('/', (req, res) => {
